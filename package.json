@@ -1,0 +1,26 @@
+{
+  "name": "@trendyol/baklava-cypress-plugin",
+  "version": "0.0.1",
+  "description": "baklava cypress plugin",
+  "main": "index.js",
+  "author": "ramazannseyhan@gmail.com",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "cy:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trendyol/baklava-cypress-plugin.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Trendyol/baklava-cypress-plugin/issues"
+  },
+  "homepage": "https://github.com/Trendyol/baklava-cypress-plugin#readme",
+  "devDependencies": {
+    "cypress": "^13.3.2"
+  }
+}

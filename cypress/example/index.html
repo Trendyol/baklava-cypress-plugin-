@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@trendyol/baklava@2.3.0/dist/themes/default.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@trendyol/baklava@2.3.0/dist/baklava.js"
+    ></script>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        gap: 1rem;
+
+        & > * {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <bl-button
+      kind="primary"
+      variant="primary"
+      icon="search"
+      data-testid="baklava-button"
+      >Baklava works!</bl-button
+    >
+
+    <div id="text" data-testid="text"></div>
+
+    <bl-input
+      data-testid="baklava-input"
+      type="password"
+      placeholder="Enter Your Password"
+      label="Password"
+      help-text="Password must be at least 8 characters"
+      label-fixed
+      icon="lock"
+    ></bl-input>
+
+    <bl-textarea
+      data-testid="baklava-textarea"
+      placeholder="Enter Your Text"
+      label="Text"
+      help-text="Text must be at least 8 characters"
+      label-fixed
+    ></bl-textarea>
+
+    <bl-select
+      data-testid="baklava-select"
+      label="Country"
+      label-fixed
+      placeholder="Choose country"
+      clearable
+      help-text="You can select only one country"
+    >
+      <bl-select-option value="tr">Turkiye</bl-select-option>
+      <bl-select-option value="nl">The Netherlands</bl-select-option>
+      <bl-select-option value="de">Germany</bl-select-option>
+      <bl-select-option value="uk">United Kingdom</bl-select-option>
+    </bl-select>
+
+    <bl-checkbox data-testid="baklava-checkbox">Checkbox Label</bl-checkbox>
+
+    <bl-switch data-testid="baklava-switch"></bl-switch>
+
+    <bl-alert
+      data-testid="baklava-alert"
+      caption="Baklava Alert Caption"
+      icon
+      closable
+    >
+      Baklava alert is working!
+      <bl-button data-testid="action-primary" slot="action"
+        >Action Link</bl-button
+      >
+      <bl-button data-testid="action-secondary" slot="action-secondary"
+        >Action Link</bl-button
+      >
+    </bl-alert>
+
+    <bl-badge
+      icon="pin"
+      size="large"
+      data-testid="baklava-badge"
+      style="
+        --bl-badge-bg-color: rgb(254, 242, 232);
+        --bl-badge-color: rgb(242, 122, 26);
+      "
+    >
+      Location Badge
+    </bl-badge>
+
+    <bl-icon
+      data-testid="baklava-icon"
+      style="
+        font-size: var(--bl-font-size-3xl);
+        color: var(--bl-color-neutral-light);
+      "
+      name="pin"
+    ></bl-icon>
+
+    <bl-tab-group data-testid="baklava-tab-group">
+      <bl-tab name="test-1" slot="tabs" disabled>Disabled</bl-tab>
+      <bl-tab name="test-2" slot="tabs" selected>Selected</bl-tab>
+      <bl-tab name="test-3" slot="tabs">Tab</bl-tab>
+    </bl-tab-group>
+
+    <script>
+      const button = document.querySelector('[data-testid="baklava-button"]');
+      button.addEventListener("click", () => {
+        const text = document.getElementById("text");
+        text.innerHTML = "baklava-button clicked! Baklava is working!";
+      });
+
+      const primaryAction = document.querySelector(
+        '[data-testid="action-primary"]'
+      );
+
+      primaryAction.addEventListener("click", () => {
+        const text = document.getElementById("text");
+        text.innerHTML = "primary action clicked!";
+      });
+
+      const secondaryAction = document.querySelector(
+        '[data-testid="action-secondary"]'
+      );
+
+      secondaryAction.addEventListener("click", () => {
+        const text = document.getElementById("text");
+        text.innerHTML = "secondary action clicked!";
+      });
+    </script>
+  </body>
+</html>

@@ -8,7 +8,8 @@
     "access": "public"
   },
   "scripts": {
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "build": "echo \"Not implemented yet\""
   },
   "repository": {
     "type": "git",

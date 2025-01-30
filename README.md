@@ -1,3 +1,5 @@
+
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Trendyol/baklava-cypress-plugin/badge)](https://scorecard.dev/viewer/?uri=github.com/Trendyol/baklava-cypress-plugin)
 # Cypress Baklava Test Plugin
 
 This Cypress plugin is designed to test the open-source UI library used in our company. The plugin includes customized Cypress commands to facilitate testing of some commonly used UI elements. Below are examples of how to use this plugin.
